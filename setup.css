@@ -1,0 +1,345 @@
+/* ============================================================
+   KAI PLACEMENT COPILOT — SETUP WIZARD STYLES
+   ============================================================ */
+
+.setup-page {
+    min-height: 100vh;
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── SETUP HEADER ── */
+.setup-header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: var(--space-5) var(--space-8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.setup-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.setup-brand-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius);
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.setup-brand-name {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--text);
+}
+
+.setup-step-counter {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: var(--surface-2);
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border);
+}
+
+/* ── SETUP BODY ── */
+.setup-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-10) var(--space-6);
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ── STEP CONTENT ── */
+.step-card {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    padding: var(--space-10) var(--space-10);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
+    width: 100%;
+    animation: scaleIn 0.3s ease both;
+}
+
+.step-icon-badge {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-md);
+    background: var(--primary-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: var(--space-5);
+}
+
+.step-card h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: var(--space-2);
+}
+
+.step-card .step-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: var(--space-8);
+    line-height: 1.6;
+}
+
+/* ── SELECTION GRID ── */
+.selection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-3);
+    margin-bottom: var(--space-6);
+}
+
+.selection-card {
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: var(--space-5);
+    cursor: pointer;
+    transition: all var(--transition);
+    background: var(--surface);
+    text-align: center;
+}
+
+.selection-card:hover {
+    border-color: var(--primary);
+    background: var(--primary-bg);
+    transform: translateY(-2px);
+}
+
+.selection-card.selected {
+    border-color: var(--primary);
+    background: var(--primary-bg);
+    box-shadow: 0 0 0 1px var(--primary);
+}
+
+.selection-card .sel-icon {
+    font-size: 1.75rem;
+    margin-bottom: var(--space-3);
+    display: block;
+}
+
+.selection-card .sel-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.selection-card .sel-desc {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+/* ── LEARNING PATH CARD ── */
+.learning-path-card {
+    border-radius: var(--radius-md);
+    padding: var(--space-6);
+    background: linear-gradient(135deg, var(--primary-bg) 0%, var(--accent-bg) 100%);
+    border: 2px solid var(--primary);
+    margin-bottom: var(--space-6);
+}
+
+.learning-path-card .lp-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: var(--space-2);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.learning-path-card .lp-desc {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: var(--space-4);
+}
+
+.learning-path-card .lp-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.lp-topic-chip {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    padding: 4px 12px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* ── SKILL SECTION ── */
+.skill-category {
+    margin-bottom: var(--space-6);
+}
+
+.skill-category-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-subtle);
+    margin-bottom: var(--space-3);
+    padding-bottom: var(--space-2);
+    border-bottom: 1px solid var(--border);
+}
+
+.skill-selected-count {
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* ── MINI TEST ── */
+.mini-test-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--border);
+}
+
+.question-counter {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.question-counter .qc-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.question-counter .qc-num {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.test-question {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: var(--space-5);
+    line-height: 1.5;
+}
+
+.test-skill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    background: var(--primary-bg);
+    color: var(--primary);
+    border-radius: var(--radius-full);
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+}
+
+/* ── STEP NAV BUTTONS ── */
+.step-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--space-8);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--border);
+}
+
+/* ── RESULT SCREEN ── */
+.setup-complete-card {
+    text-align: center;
+    padding: var(--space-12);
+}
+
+.setup-complete-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--success-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto var(--space-6);
+    border: 3px solid var(--success);
+    animation: scaleIn 0.4s ease both;
+}
+
+.setup-complete-card h2 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: var(--space-3);
+}
+
+.setup-complete-card p {
+    color: var(--text-muted);
+    margin-bottom: var(--space-8);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skill-level-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: var(--space-3);
+    margin: var(--space-5) 0;
+    text-align: left;
+}
+
+.skill-level-item {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: var(--space-4);
+}
+
+.skill-level-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+}
+
+.skill-level-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+    .step-card {
+        padding: var(--space-6) var(--space-5);
+    }
+
+    .selection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

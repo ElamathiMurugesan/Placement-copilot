@@ -1,0 +1,275 @@
+/* ── College Placement Intelligence Styles ──────────────────── */
+
+.intel-page {
+    padding: var(--space-4) var(--space-6);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intel-header {
+    background: linear-gradient(135deg, #1E293B, #0F172A);
+    color: white;
+    padding: var(--space-6) var(--space-8);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-6);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.intel-header::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background: radial-gradient(circle at right, rgba(124, 58, 237, 0.2) 0%, transparent 70%);
+}
+
+.intel-header h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: var(--space-2);
+    letter-spacing: -0.02em;
+}
+
+.intel-header p {
+    color: #94A3B8;
+    font-size: 1.05rem;
+    max-width: 600px;
+}
+
+.intel-disclaimer {
+    background: rgba(245, 158, 11, 0.1);
+    border-left: 4px solid #F59E0B;
+    color: #B45309;
+    padding: 12px 16px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: var(--space-6);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ── College Selector ── */
+.college-selector-card {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    margin-bottom: var(--space-6);
+    text-align: center;
+}
+
+.college-select {
+    width: 100%;
+    max-width: 500px;
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    background: #f8fafc;
+    color: var(--text);
+    outline: none;
+    transition: all 0.2s;
+    cursor: pointer;
+    font-family: inherit;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+}
+
+.college-select:focus {
+    border-color: #3B82F6;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+/* ── History Timeline ── */
+.timeline-container {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    margin-bottom: var(--space-6);
+}
+
+.timeline-year-group {
+    margin-bottom: var(--space-6);
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline-year-group::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: -30px;
+    width: 2px;
+    background: #E2E8F0;
+}
+
+.timeline-year-group:last-child::before {
+    bottom: 0;
+}
+
+.timeline-year-label {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1E293B;
+    margin-bottom: var(--space-3);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-year-label::before {
+    content: '';
+    position: absolute;
+    left: -27px;
+    width: 12px;
+    height: 12px;
+    background: #3B82F6;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 1px #E2E8F0;
+}
+
+.company-pill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.comp-pill {
+    background: #F1F5F9;
+    border: 1px solid #E2E8F0;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #334155;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.15s;
+}
+
+.comp-pill:hover {
+    transform: translateY(-2px);
+    background: #fff;
+    border-color: #CBD5E1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.comp-new-badge {
+    background: #10B981;
+    color: white;
+    font-size: 0.6rem;
+    padding: 2px 6px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.comp-lpa {
+    color: #64748B;
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+/* ── Combinations & Insights ── */
+.intel-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+}
+
+.intel-card {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+}
+
+.intel-card h3 {
+    font-size: 1.1rem;
+    color: #0F172A;
+    margin-bottom: var(--space-4);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+}
+
+.combo-sequence {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.combo-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: #F8FAFC;
+    border-radius: var(--radius);
+    border-left: 3px solid #3B82F6;
+}
+
+.combo-day {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748B;
+    text-transform: uppercase;
+    width: 50px;
+}
+
+.combo-comp {
+    font-weight: 600;
+    color: #0F172A;
+}
+
+.combo-role {
+    font-size: 0.8rem;
+    color: #64748B;
+    margin-left: auto;
+}
+
+.ai-insight-box {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(59, 130, 246, 0.05));
+    border: 1px solid rgba(124, 58, 237, 0.1);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+    margin-top: var(--space-6);
+}
+
+.ai-insight-box h4 {
+    color: #7C3AED;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.ai-insight-text {
+    line-height: 1.6;
+    color: #334155;
+}
+
+@media (max-width: 900px) {
+    .intel-grid {
+        grid-template-columns: 1fr;
+    }
+}
